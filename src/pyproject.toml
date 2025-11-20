@@ -1,0 +1,13 @@
+[project]
+name = "src"
+version = "0.1.0"
+description = "Producer Consumer problem implementation in Python. This is a classical OS problem in CS"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.4.0",
+    "ruff>=0.14.5",
+]

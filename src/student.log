@@ -1,0 +1,23 @@
+2025-11-20 13:57:28 INFO:Server thread started...
+2025-11-20 13:57:28 INFO:Server started, listening on 127.0.0.1: 65432
+2025-11-20 13:57:29 INFO:Starting Client...
+2025-11-20 13:57:29 INFO:Connected by ('127.0.0.1', 61643)
+2025-11-20 13:57:29 INFO:Consumer Processed Student: Sihlelelwe Dlamini (20215141) - Average: 68.33% - Status: Pass
+2025-11-20 13:57:31 INFO:Connected by ('127.0.0.1', 61645)
+2025-11-20 13:57:31 INFO:Consumer Processed Student: Thando Ngwenya (20213146) - Average: 77.67% - Status: Pass
+2025-11-20 13:57:33 INFO:Connected by ('127.0.0.1', 61646)
+2025-11-20 13:57:33 INFO:Consumer Processed Student: Sihlelelwe Shabangu (20211029) - Average: 72.00% - Status: Pass
+2025-11-20 13:57:36 INFO:Connected by ('127.0.0.1', 61038)
+2025-11-20 13:57:36 INFO:Consumer Processed Student: Silindokuhle Ngwenya (20251813) - Average: 59.33% - Status: Pass
+2025-11-20 13:57:39 INFO:Connected by ('127.0.0.1', 61039)
+2025-11-20 13:57:39 INFO:Consumer Processed Student: Ncobizwe Dlamini (20251680) - Average: 49.67% - Status: Fail
+2025-11-20 13:57:42 INFO:Connected by ('127.0.0.1', 61040)
+2025-11-20 13:57:42 INFO:Consumer Processed Student: Thando Masango (20226013) - Average: 67.33% - Status: Pass
+2025-11-20 13:57:44 INFO:Connected by ('127.0.0.1', 61041)
+2025-11-20 13:57:44 INFO:Consumer Processed Student: Thando Ngwenya (20221555) - Average: 68.33% - Status: Pass
+2025-11-20 13:57:46 INFO:Connected by ('127.0.0.1', 61042)
+2025-11-20 13:57:46 INFO:Consumer Processed Student: Sihlelelwe Dlamini (20216929) - Average: 71.67% - Status: Pass
+2025-11-20 13:57:48 INFO:Connected by ('127.0.0.1', 61043)
+2025-11-20 13:57:49 INFO:Consumer Processed Student: Ncobizwe Dlamini (20242707) - Average: 88.33% - Status: Pass
+2025-11-20 13:57:50 INFO:Connected by ('127.0.0.1', 61045)
+2025-11-20 13:57:50 INFO:Consumer Processed Student: Silindokuhle Sikhondze (20243752) - Average: 59.00% - Status: Pass
