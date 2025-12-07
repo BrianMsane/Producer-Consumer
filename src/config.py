@@ -4,6 +4,7 @@ HOST = "127.0.0.1"  # localhost
 PORT = 65432
 BUFFER_SIZE = 10
 SHARED_DIR = "../buffer"
+SCHEMA_FILE = "student.xsd"
 
 if not os.path.exists(SHARED_DIR):
     os.makedirs(SHARED_DIR)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ITstudent">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="StudentID" type="xs:int"/>
+                <xs:element name="Programme" type="xs:string"/>
+                <xs:element name="Courses">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Course" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:int">
+                                            <xs:attribute name="name" type="xs:string" use="required"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

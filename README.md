@@ -1,42 +1,102 @@
-# Producer-Consumer 💫✨
+# Producer-Consumer Project 💫✨
 
-An implementation of the producer consumer problem in _Operating Systems_ using `semaphores`, **socket programming**, `XML` files, and `Object-Oriented Programming`.
+**By:** Thandokuhle Msane and Thandolwethu Nhlabatsi \
+**Course:** CSC411 - Integrative Programming Technologies \
+**Institution:** University of Eswatini
 
-## Producer
+## Assignment Overview
 
-The producer produces data on _student information_ and stores the data on the ``ITstudent`` class. The class has these member variables.
+This project is a practical implementation of the **Producer-Consumer Problem**, a classic synchronization issue in Operating Systems. We have implemented this using **Python**, utilizing **Socket Programming** for communication between processes , **XML** for data exchange, and **Semaphores** for concurrency control.
 
-- Student name
-- Student ID (8 digits)
-- Programme
-- List of courses and related marks
+The goal is to safely share a finite buffer between a Producer (who generates student data) and a Consumer (who processes results) without data loss or race conditions.
 
-**_Wrap the student information into an XML format_**. Place the file in the **_same directory it shares with the buffer_**. At the same time, **_insert an integer_**, on the buffer/queue, that corresponds to the file name. For example, if the file name is student1.xml, place 1 in the buffer.
+## Theoretical Concepts
 
-## Consumer
+To understand this implementation, it is essential to understand the underlying Operating Systems concepts:
 
-The consumer reads the content of the XML file from the buffer; unwraps the XML file and gather the student information into the `ITstudent` class. At the same time, it should clear/delete the file and remove teh integer from the buffer.
+### 1. The Producer-Consumer Problem
 
-- On `ITstudent`, the consumer should calculate the average mark based on teh allocated marks for all courses and then determine if the student passed or failed, given that the passing mark is 50%.
-- Print on standard output
-  - Student name
-  - Student ID
-  - Programme
-  - Courses and associated marks
-  - Average Mark
-  - Pass or fail status
+This is a synchronization problem where two processes, the **Producer** and the **Consumer**, share a common, fixed-size buffer.
 
-## Buffer
+- **The Producer's Job:** Generate data, put it into the buffer, and start again.
+- **The Consumer's Job:** Remove data from the buffer and process it.
+- **The Problem:** We must make sure the Producer doesn't try to add data to a full buffer and the Consumer doesn't try to remove data from an empty buffer.
 
-This is a `bounded buffer` problem given that it has a maximum size of 10 elements. That is, in the shared folder, we need to have 10 files and each file should have an associated number of the buffer.
+### 2. Queues (The Buffer)
 
-The rules for accessing the buffer are:
+We use a **FIFO (First-In-First-Out) Queue** to act as the shared buffer. It is a "bounded buffer," meaning it has a strict limit on how many items it can hold (Maximum 10 elements).
 
-1. The producer should not producer if the buffer if full
-2. The consumer should not consume if hte buffer is empty
-3. Buffer access should be mutually exclusive (one process at a time)
+### 3. Critical Section
 
-### Note
+The **Critical Section** is a part of the code where the process accesses a shared resource (in our case, the `buffer_queue`). Only one process can execute in the critical section at a time to prevent data corruption.
 
-- Use `mutext/semaphores` to ensure buffer rules are enforced, especially the mutual exclusive one.
-- Use `socket programming` to implement the producer and consumer problem.
+- **Requirement:** Access to the shared buffer must be mutually exclusive.
+
+### 4. Semaphores
+
+Semaphores are signaling mechanisms used to control access to the critical section. In this project, we use three specific semaphores:
+
+- **`mutex` (Mutual Exclusion):** Acts like a lock. It ensures that only one thread accesses the buffer at a time.
+- **`empty_slots`:** Counts how many spots are open in the buffer. The Producer waits on this if the buffer is full.
+- **`filled_slots`:** Counts how many items are currently in the buffer. The Consumer waits on this if the buffer is empty.
+
+### 5. Threading & Sockets
+
+- **Socket Programming:** Allows our Producer, Consumer, and Server to run as separate processes and communicate over a network.
+- **Threading:** The Server uses threads to handle multiple connections simultaneously, allowing the Producer and Consumer to interact with the buffer at the same time.
+
+## Implementation Details
+
+### 1. The Server (`server.py`) - The Buffer Manager
+
+The Server acts as the "Middle Man" managing the shared resources.
+
+- It initializes the `Queue` (size 10).
+- It manages the **Semaphores** to enforce synchronization rules.
+- It listens for connections from the Producer and Consumer using Sockets.
+
+### 2. The Producer (`producer.py`)
+
+The Producer generates student information using the `ITstudent` class.
+
+- **Data Generation:** Randomly generates Student Name, ID (8 digits), Programme, and Courses with marks.
+- **XML Wrapping:** Wraps this data into an XML file (e.g., `student1.xml`).
+- **Schema Validation:** Ensures the XML follows the strict `student.xsd` schema.
+- **Shared Storage:** Saves the XML file to the shared `../buffer` directory.
+- **Notification:** Sends the **file ID** (integer) to the Server to be added to the queue.
+
+### 3. The Consumer (`consumer.py`)
+
+The Consumer processes the data generated by the Producer.
+
+- **Request:** Asks the Server for a file ID. If the buffer is empty, the Consumer waits.
+- **Unwrapping:** Reads the corresponding XML file from the shared directory and parses it back into an `ITstudent` class.
+- **Cleanup:** Deletes the XML file from the directory and the ID is removed from the buffer.
+- **Processing:**
+  - Calculates the average mark.
+  - Determines Pass/Fail status where 50% is the passing mark.
+  - Prints, on standard output, the Student Name, ID, Programme, Courses, Marks, and Status to the screen.
+
+## 🧰 Tools & Technologies Used
+
+- **Python 3.14:** An intepreter-based programming language.
+- **Socket API:** For implementing the TCP/IP connection between the three scripts.
+- **XML (Extensible Markup Language):** Used for structuring the student data for storage.
+- **XSD (XML Schema Definition):** Used to validate the structure of the generated XML files.
+- **GitHub:** Used for version control and collaboration.
+- **Threading & Queue Modules:** Python's built-in libraries for handling concurrency.
+
+## 📂 Project Structure
+
+```text
+Producer-Consumer/
+│
+├── buffer/              # Shared directory for XML files 
+├── server.py            # Holds the Buffer, Semaphores, and Socket Server
+├── producer.py          # Generates data and XML files
+├── consumer.py          # Reads XML, calculates grades, prints reports
+├── utils.py             # Contains ITstudent class and XML logic
+├── config.py            # Shared settings (IP, Port, File paths)
+├── student.xsd          # XML Schema for validation
+└── README.md            # Project Documentation
+```

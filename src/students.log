@@ -1,0 +1,167 @@
+22:58:43 [INFO] Server (Buffer) listening on 127.0.0.1:65432
+22:59:00 [INFO] Producer generated & validated: student1.xml
+22:59:00 [INFO] Producer trying to add student1.xml...
+22:59:00 [INFO] Buffer Update: Added ID 1. Size: 1/10
+22:59:00 [INFO] Server says: ACK 1 added to buffer.
+22:59:01 [INFO] Producer generated & validated: student2.xml
+22:59:01 [INFO] Producer trying to add student2.xml...
+22:59:01 [INFO] Buffer Update: Added ID 2. Size: 2/10
+22:59:01 [INFO] Server says: ACK 2 added to buffer.
+22:59:02 [INFO] Producer generated & validated: student3.xml
+22:59:03 [INFO] Producer trying to add student3.xml...
+22:59:03 [INFO] Buffer Update: Added ID 3. Size: 3/10
+22:59:03 [INFO] Server says: ACK 3 added to buffer.
+22:59:04 [INFO] Producer generated & validated: student4.xml
+22:59:04 [INFO] Producer trying to add student4.xml...
+22:59:04 [INFO] Buffer Update: Added ID 4. Size: 4/10
+22:59:04 [INFO] Server says: ACK 4 added to buffer.
+22:59:05 [INFO] Producer generated & validated: student5.xml
+22:59:05 [INFO] Producer trying to add student5.xml...
+22:59:05 [INFO] Buffer Update: Added ID 5. Size: 5/10
+22:59:05 [INFO] Server says: ACK 5 added to buffer.
+22:59:06 [INFO] Producer generated & validated: student6.xml
+22:59:06 [INFO] Producer trying to add student6.xml...
+22:59:06 [INFO] Buffer Update: Added ID 6. Size: 6/10
+22:59:06 [INFO] Server says: ACK 6 added to buffer.
+22:59:07 [INFO] Producer generated & validated: student7.xml
+22:59:07 [INFO] Producer trying to add student7.xml...
+22:59:07 [INFO] Buffer Update: Added ID 7. Size: 7/10
+22:59:07 [INFO] Server says: ACK 7 added to buffer.
+22:59:08 [INFO] Producer generated & validated: student8.xml
+22:59:08 [INFO] Producer trying to add student8.xml...
+22:59:08 [INFO] Buffer Update: Added ID 8. Size: 8/10
+22:59:08 [INFO] Server says: ACK 8 added to buffer.
+22:59:09 [INFO] Producer generated & validated: student9.xml
+22:59:09 [INFO] Producer trying to add student9.xml...
+22:59:09 [INFO] Buffer Update: Added ID 9. Size: 9/10
+22:59:09 [INFO] Server says: ACK 9 added to buffer.
+22:59:10 [INFO] Producer generated & validated: student10.xml
+22:59:10 [INFO] Producer trying to add student10.xml...
+22:59:10 [INFO] Buffer Update: Added ID 10. Size: 10/10
+22:59:10 [INFO] Server says: ACK 10 added to buffer.
+23:03:17 [INFO] Consumer requesting data...
+23:03:17 [INFO] Buffer Update: Removed ID 1. Size: 9/10
+23:03:17 [INFO] Received ID from buffer: 1
+23:03:17 [INFO] Consumer processed & deleted: student1.xml
+23:07:09 [INFO] Consumer requesting data...
+23:07:09 [INFO] Buffer Update: Removed ID 2. Size: 8/10
+23:07:09 [INFO] Received ID from buffer: 2
+23:07:09 [INFO] Consumer processed & deleted: student2.xml
+23:07:10 [INFO] Consumer requesting data...
+23:07:10 [INFO] Buffer Update: Removed ID 3. Size: 7/10
+23:07:10 [INFO] Received ID from buffer: 3
+23:07:10 [INFO] Consumer processed & deleted: student3.xml
+23:07:12 [INFO] Consumer requesting data...
+23:07:12 [INFO] Buffer Update: Removed ID 4. Size: 6/10
+23:07:12 [INFO] Received ID from buffer: 4
+23:07:12 [INFO] Consumer processed & deleted: student4.xml
+23:07:13 [INFO] Consumer requesting data...
+23:07:13 [INFO] Buffer Update: Removed ID 5. Size: 5/10
+23:07:13 [INFO] Received ID from buffer: 5
+23:07:13 [INFO] Consumer processed & deleted: student5.xml
+23:07:15 [INFO] Consumer requesting data...
+23:07:15 [INFO] Buffer Update: Removed ID 6. Size: 4/10
+23:07:15 [INFO] Received ID from buffer: 6
+23:07:15 [INFO] Consumer processed & deleted: student6.xml
+23:07:16 [INFO] Consumer requesting data...
+23:07:16 [INFO] Buffer Update: Removed ID 7. Size: 3/10
+23:07:16 [INFO] Received ID from buffer: 7
+23:07:16 [INFO] Consumer processed & deleted: student7.xml
+23:07:18 [INFO] Consumer requesting data...
+23:07:18 [INFO] Buffer Update: Removed ID 8. Size: 2/10
+23:07:18 [INFO] Received ID from buffer: 8
+23:07:18 [INFO] Consumer processed & deleted: student8.xml
+23:07:19 [INFO] Consumer requesting data...
+23:07:19 [INFO] Buffer Update: Removed ID 9. Size: 1/10
+23:07:19 [INFO] Received ID from buffer: 9
+23:07:19 [INFO] Consumer processed & deleted: student9.xml
+23:07:21 [INFO] Consumer requesting data...
+23:07:21 [INFO] Buffer Update: Removed ID 10. Size: 0/10
+23:07:21 [INFO] Received ID from buffer: 10
+23:07:21 [INFO] Consumer processed & deleted: student10.xml
+23:07:22 [INFO] Consumer requesting data...
+23:21:25 [INFO] Server thread started...
+23:21:25 [INFO] Server (Buffer) listening on 127.0.0.1:65432
+23:21:26 [INFO] Consumer thread started...
+23:21:26 [INFO] Producer thread started...
+23:21:26 [INFO] Consumer requesting data...
+23:21:26 [INFO] Producer generated & validated: student1.xml
+23:21:26 [INFO] Producer trying to add student1.xml...
+23:21:26 [INFO] Buffer Update: Added ID 1. Size: 1/10
+23:21:26 [INFO] Buffer Update: Removed ID 1. Size: 0/10
+23:21:26 [INFO] Server says: ACK 1 added to buffer.
+23:21:26 [INFO] Received ID from buffer: 1
+23:21:26 [INFO] Consumer processed & deleted: student1.xml
+23:21:27 [INFO] Producer generated & validated: student2.xml
+23:21:27 [INFO] Producer trying to add student2.xml...
+23:21:27 [INFO] Buffer Update: Added ID 2. Size: 1/10
+23:21:27 [INFO] Server says: ACK 2 added to buffer.
+23:21:28 [INFO] Consumer requesting data...
+23:21:28 [INFO] Buffer Update: Removed ID 2. Size: 0/10
+23:21:28 [INFO] Received ID from buffer: 2
+23:21:28 [INFO] Consumer processed & deleted: student2.xml
+23:21:28 [INFO] Producer generated & validated: student3.xml
+23:21:28 [INFO] Producer trying to add student3.xml...
+23:21:28 [INFO] Buffer Update: Added ID 3. Size: 1/10
+23:21:28 [INFO] Server says: ACK 3 added to buffer.
+23:21:29 [INFO] Consumer requesting data...
+23:21:29 [INFO] Buffer Update: Removed ID 3. Size: 0/10
+23:21:29 [INFO] Received ID from buffer: 3
+23:21:29 [INFO] Consumer processed & deleted: student3.xml
+23:21:29 [INFO] Producer generated & validated: student4.xml
+23:21:29 [INFO] Producer trying to add student4.xml...
+23:21:29 [INFO] Buffer Update: Added ID 4. Size: 1/10
+23:21:29 [INFO] Server says: ACK 4 added to buffer.
+23:21:30 [INFO] Producer generated & validated: student5.xml
+23:21:30 [INFO] Producer trying to add student5.xml...
+23:21:30 [INFO] Buffer Update: Added ID 5. Size: 2/10
+23:21:30 [INFO] Server says: ACK 5 added to buffer.
+23:21:31 [INFO] Consumer requesting data...
+23:21:31 [INFO] Buffer Update: Removed ID 4. Size: 1/10
+23:21:31 [INFO] Received ID from buffer: 4
+23:21:31 [INFO] Consumer processed & deleted: student4.xml
+23:21:31 [INFO] Producer generated & validated: student6.xml
+23:21:31 [INFO] Producer trying to add student6.xml...
+23:21:31 [INFO] Buffer Update: Added ID 6. Size: 2/10
+23:21:31 [INFO] Server says: ACK 6 added to buffer.
+23:21:32 [INFO] Consumer requesting data...
+23:21:32 [INFO] Buffer Update: Removed ID 5. Size: 1/10
+23:21:32 [INFO] Received ID from buffer: 5
+23:21:32 [INFO] Consumer processed & deleted: student5.xml
+23:21:33 [INFO] Producer generated & validated: student7.xml
+23:21:33 [INFO] Producer trying to add student7.xml...
+23:21:33 [INFO] Buffer Update: Added ID 7. Size: 2/10
+23:21:33 [INFO] Server says: ACK 7 added to buffer.
+23:21:34 [INFO] Producer generated & validated: student8.xml
+23:21:34 [INFO] Producer trying to add student8.xml...
+23:21:34 [INFO] Buffer Update: Added ID 8. Size: 3/10
+23:21:34 [INFO] Server says: ACK 8 added to buffer.
+23:21:34 [INFO] Consumer requesting data...
+23:21:34 [INFO] Buffer Update: Removed ID 6. Size: 2/10
+23:21:34 [INFO] Received ID from buffer: 6
+23:21:34 [INFO] Consumer processed & deleted: student6.xml
+23:21:35 [INFO] Producer generated & validated: student9.xml
+23:21:35 [INFO] Producer trying to add student9.xml...
+23:21:35 [INFO] Buffer Update: Added ID 9. Size: 3/10
+23:21:35 [INFO] Server says: ACK 9 added to buffer.
+23:21:35 [INFO] Consumer requesting data...
+23:21:35 [INFO] Buffer Update: Removed ID 7. Size: 2/10
+23:21:35 [INFO] Received ID from buffer: 7
+23:21:35 [INFO] Consumer processed & deleted: student7.xml
+23:21:36 [INFO] Producer generated & validated: student10.xml
+23:21:36 [INFO] Producer trying to add student10.xml...
+23:21:36 [INFO] Buffer Update: Added ID 10. Size: 3/10
+23:21:36 [INFO] Server says: ACK 10 added to buffer.
+23:21:37 [INFO] Consumer requesting data...
+23:21:37 [INFO] Buffer Update: Removed ID 8. Size: 2/10
+23:21:37 [INFO] Received ID from buffer: 8
+23:21:37 [INFO] Consumer processed & deleted: student8.xml
+23:21:38 [INFO] Consumer requesting data...
+23:21:38 [INFO] Buffer Update: Removed ID 9. Size: 1/10
+23:21:38 [INFO] Received ID from buffer: 9
+23:21:38 [INFO] Consumer processed & deleted: student9.xml
+23:21:40 [INFO] Consumer requesting data...
+23:21:40 [INFO] Buffer Update: Removed ID 10. Size: 0/10
+23:21:40 [INFO] Received ID from buffer: 10
+23:21:40 [INFO] Consumer processed & deleted: student10.xml
+23:21:41 [INFO] All tasks completed successfully.
