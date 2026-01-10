@@ -13,7 +13,7 @@ NAMES = [
     "Ncengwa",
     "Thando",
     "Sihlelelwe",
-    "Noncedo Masango",
+    "Noncedo",
     "Ncobizwe",
     "Silindokuhle",
 ]

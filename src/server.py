@@ -63,16 +63,22 @@ def handle_client(conn, addr):
 
 def start_server():
     """Starts the socket server."""
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind((HOST, PORT))
-        s.listen()
-        logger.info(f"Server (Buffer) listening on {HOST}:{PORT}")
-        
-        while True:
-            conn, addr = s.accept()
-            t = threading.Thread(target=handle_client, args=(conn, addr))
-            t.start()
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.bind((HOST, PORT))
+            s.listen()
+            logger.info(f"Server (Buffer) listening on {HOST}:{PORT}")
+            
+            while True:
+                conn, addr = s.accept()
+                t = threading.Thread(target=handle_client, args=(conn, addr))
+                t.start()
+    except OSError:
+        logger.debug('The server has already been started')
+    except Exception as exp:
+        logger.error('An unexpected exception has ocurred %s', str(exp))
 
 
 if __name__ == "__main__":
+    print('Starting the server')
     start_server()
